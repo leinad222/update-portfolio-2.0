@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AQ37p_ZO_jm9veI7qeX9CvnVvbiuJU1-wGkKQNpGzQHgfqoa0MnO1HOMRj8Hgn4ziYN9VsugEb6czKzy&currency=EUR"></script>
+  <script src="https://kit.fontawesome.com/1d36c0aa30.js" crossorigin="anonymous"></script>
+
+  <title>Daniel Pace - Portfolio</title>
+</head>
+
+<body id="top">
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="#top" class="nav-logo">Daniel Pace</a>
+
+      <!-- Nav Menu -->
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#quote-section" class="nav-link">Request Quote</a></li>
+          <li><a href="#pricing-page" class="nav-link">Pricing</a></li>
+        </ul>
+        <!-- Close button for mobile -->
+        <button class="nav-close" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Right side buttons -->
+      <div class="nav-btns">
+        <button id="change-theme" class="change-theme" aria-label="Toggle theme">
+          <i class="fa-regular fa-sun"></i>
+        </button>
+        <button id="cart-toggle" class="cart-toggle" aria-label="Open cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+        <!-- Hamburger toggle -->
+        <button class="nav-toggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <div class="cart-summary">
+        <div class="summary-line">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal">€0.00</span>
+        </div>
+
+        <div id="paypal-button-container"></div>
+
+        <div class="quote-notice" id="quote-notice">
+          <i class="fa-solid fa-circle-info"></i>
+          Your inquiry includes custom installation services. Please request a quote to finalize pricing.
+        </div>
+        <!-- PayPal button will render into #paypal-button-container -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Home Section -->
+    <section class="home-container container grid" id="home">
+      <!-- Left: Text -->
+      <div class="home-data">
+        <h1 class="home-title">Daniel</h1>
+        <h2 class="home-job">Web Developer / Designer / Software Developer</h2>
+        <p class="home-description">
+          I am building my portfolio to showcase creative and technical work.
+          This site brings together my passion for 3D design, front-end development,
+          and digital art into one professional hub.
+        </p>
+        <div class="home-buttons">
+          <a href="#products" class="button">My Work</a>
+          <a href="https://github.com/leinad222" target="_blank" class="home-social-link" rel="noopener noreferrer">
+            Github <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Right: Image -->
+      <div class="home-image-wrapper">
+        <img src="images/profile-image.png" alt="Portrait of Daniel Pace" class="home-img">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="about-container container grid">
+
+        <div class="about-experience">
+          <span class="about-no">5</span>
+          <h3 class="about-title">Years<br>Experience</h3>
+        </div>
+
+        <h1 class="about-description">
+          <span class="text-gradient">Over the past five years</span>, I have built a strong foundation in HTML, CSS,
+          and JavaScript,<span class="text-gradient"> evolving from simple static pages to clean and responsive
+            designs.</span>
+        </h1>
+
+        <a href="cv/update Cv 2026_13_04.pdf" download class="button">Download CV</a>
+
+        <ul class="about-data data-grid" id="data-grid">
+          <li class="about-item">
+            <h3 class="about-details">Certified Photoshop User</h3>
+            <img src="images/icons8-photoshop-40.png" alt="Photoshop logo">
+          </li>
+          <li class="about-item">
+            <h3 class="about-details">Certified Illustrator User</h3>
+            <img src="images/icons8-illustrator-40.png" alt="Illustrator logo">
+          </li>
+          <li class="about-item">
+            <h3 class="about-details">Amazon and eBay Affiliate</h3>
+            <img src="images/icons8-amazon-40.png" alt="Amazon logo">
+            <img src="images/icons8-ebay-40.png" alt="eBay logo">
+          </li>
+        </ul>
+      </div>
+    </section>
+    <br>
+    <section class="services-section" id="services">
+      <h2 class="section-title">My Services</h2>
+      <div class="services-container container grid">
+        <article class="services-card">
+          <span class="services-no">01</span>
+          <h3 class="services-title">Responsive Design</h3>
+          <p class="services-description">Ensure your website looks great on any device, with layouts that adapt to
+            different screen sizes seamlessly.</p>
+        </article>
+        <article class="services-card">
+          <span class="services-no">02</span>
+          <h3 class="services-title">CMS Development</h3>
+          <p class="services-description">Set up user-friendly CMS solutions like WordPress or custom-built options so
+            clients can manage content easily.</p>
+        </article>
+        <article class="services-card">
+          <span class="services-no">03</span>
+          <h3 class="services-title">API Integrations</h3>
+          <p class="services-description">Build and integrate APIs to connect websites with third-party applications,
+            enhancing functionality.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-container container grid">
+        <div class="skills-column">
+          <h3 class="skills-category">Software/Web-Developer</h3>
+          <ul class="skills-list">
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-html-40.png" alt="HTML"></div>
+              <div class="skill-meta"><span class="skill-name">HTML</span><span class="skill-level">Intermediate</span>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-css-40.png" alt="CSS"></div>
+              <div class="skill-meta"><span class="skill-name">CSS</span><span class="skill-level">Advanced</span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-js-40.png" alt="JavaScript"></div>
+              <div class="skill-meta"><span class="skill-name">JavaScript</span><span
+                  class="skill-level">Intermediate</span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-react-native-48.png" alt="React"></div>
+              <div class="skill-meta"><span class="skill-name">React</span><span class="skill-level">Intermediate</span>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-sql-40.png" alt="SQL"></div>
+              <div class="skill-meta"><span class="skill-name">SQL</span><span class="skill-level">Intermediate</span>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-c-sharp-40.png" alt="C#"></div>
+              <div class="skill-meta"><span class="skill-name">C#</span><span class="skill-level">Intermediate</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="skills-column">
+          <h3 class="skills-category">Enviroment Artist/Game Artist</h3>
+          <ul class="skills-list">
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-photoshop-40.png" alt="Photoshop"></div>
+              <div class="skill-meta"><span class="skill-name">Photoshop</span><span
+                  class="skill-level">Intermediate</span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-unity-50.png" alt="Unity"></div>
+              <div class="skill-meta"><span class="skill-name">Unity</span><span class="skill-level">Advanced</span>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-graphic-tablet-64.png" alt="Graphic Tablet"></div>
+              <div class="skill-meta"><span class="skill-name">Digital Painting</span><span
+                  class="skill-level">Intermediate</span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-object-oriented-programming-40.png"
+                  alt="Object Oriented Programming"></div>
+              <div class="skill-meta"><span class="skill-name">Object Oriented Programming</span><span
+                  class="skill-level">Intermediate</span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-illustrator-40.png" alt="Illustrator"></div>
+              <div class="skill-meta"><span class="skill-name">Illustrator</span><span class="skill-level">Expert</span>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-c-sharp-40.png" alt="C#"></div>
+              <div class="skill-meta"><span class="skill-name">C#</span><span class="skill-level">Intermediate</span>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-icon"><img src="images/icons8-3d-modelling-32.png" alt="3D Modelling"></div>
+              <div class="skill-meta"><span class="skill-name">3D Modelling</span><span
+                  class="skill-level">Intermediate</span></div>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-container container grid">
+        <!-- Left: Contact Info -->
+        <div class="contact-info">
+          <h2 class="contact-title">Let's Talk About<br>Your Project</h2>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3 class="contact-label">E-MAIL</h3>
+              <p class="contact-value">danpace1999@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3 class="contact-label">PHONE</h3>
+              <p class="contact-value">+356 79383853</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-details">
+              <h3 class="contact-label">LOCATION</h3>
+              <p class="contact-value">73, PALM FLAT 2 TRIQ IL-FERROVIJA QADIMA, BIRKIRKARA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <form class="contact-form" action="https://formsubmit.co/your@email.com" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-label">NAME</label>
+            <input type="text" id="name" class="form-input" placeholder="" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">E-MAIL</label>
+            <input type="email" id="email" class="form-input" placeholder="" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">MESSAGE</label>
+            <textarea id="message" class="form-input form-textarea" placeholder="" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="button">SEND MESSAGE</button>
+        </form>
+      </div>
+    </section>
+    <section class="quote-section container" id="quote-section">
+      <h2 class="section-title">Request a Quote</h2>
+      <form class="quote-form" action="https://formsubmit.co/your@email.com" method="POST">
+        <div class="form-group">
+          <label for="product-subject" class="form-label">Subject</label>
+          <input type="text" id="product-subject" name="subject" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label for="quote-message" class="form-label">Details</label>
+          <textarea id="quote-message" name="message" class="form-input" rows="4"></textarea>
+        </div>
+        <button type="submit" class="button">Request Quote</button>
+      </form>
+    </section>
+    <section class="product-section">
+      <section id="products" class="products-section">
+        <h2 class="section-title">Our Products</h2>
+        <div class="product-gallery">
+          <div class="product-card">
+            <img src="images/Screenshot 2026-03-22 180002.png" alt="Product 1">
+            <div class="product-info">
+              <h3>Max Wheels</h3>
+              <p>Short description of the product features.</p>
+              <div class="product-actions">
+                <button class="quote-trigger add-to-cart" data-product="Max Wheels" data-price="199.99">Request
+                  Quote</button>
+                <a href="https://leinad222.github.io/cardealerwebsite/" target="_blank" rel="noopener noreferrer"
+                  class="button preview-link">Preview</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/Screenshot 2026-03-23 085656.png" alt="Product 2">
+            <div class="product-info">
+              <h3>Bazaar Showroom</h3>
+              <p>High-quality build.</p>
+              <div class="product-actions">
+                <button class="quote-trigger add-to-cart" data-product="Bazaar Showroom" data-price="299.99">Request
+                  Quote</button>
+                <a href="https://leinad222.github.io/bazaarshowroom/" target="_blank" rel="noopener noreferrer"
+                  class="button preview-link">Preview</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/Screenshot 2026-03-23 085044.png" alt="Product 3">
+            <div class="product-info">
+              <h3>Grocery 24/7</h3>
+              <p>For Grocery E-Commence </p>
+              <div class="product-actions">
+                <button class="quote-trigger add-to-cart" data-product="Grocery 24/7" data-price="149.99">Request
+                  Quote</button>
+                <a href="https://leinad222.github.io/grocery24-7/" target="_blank" rel="noopener noreferrer"
+                  class="button preview-link">Preview</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/Screenshot 2026-06-13 212754.png" alt="AccuSound preview">
+            <div class="product-info">
+              <h3>AccuSound</h3>
+              <p>Audio storefront demo with a modern product-first layout.</p>
+              <div class="product-actions">
+                <button class="quote-trigger add-to-cart" data-product="AccuSound" data-price="0.00">Request
+                  Quote</button>
+                <a href="https://leinad222.github.io/accusound/" target="_blank" rel="noopener noreferrer"
+                  class="button preview-link">Preview</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images/Screenshot 2026-06-13 213339.png" alt="Dreamweaver practice preview">
+            <div class="product-info">
+              <h3>St.Eunice School</h3>
+              <p>Practice website built with Adobe Dreamweaver and responsive layout techniques.</p>
+              <div class="product-actions">
+                <button class="quote-trigger add-to-cart" data-product="St.Eunice School" data-price="0.00">Request
+                  Quote</button>
+                <a href="https://leinad222.github.io/dreamweaver-practicing/" target="_blank" rel="noopener noreferrer"
+                  class="button preview-link">Preview</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images/Screenshot 2026-06-13 214222.png" alt="DayFresh Butcher & Grill preview">
+            <div class="product-info">
+              <h3>DayFresh Butcher & Grill</h3>
+              <p>Restaurant demo with menu and booking layout.</p>
+              <div class="product-actions">
+                <button class="quote-trigger add-to-cart" data-product="DayFresh Butcher & Grill"
+                  data-price="0.00">Request
+                  Quote</button>
+                <a href="https://leinad222.github.io/dayfreshbutcher-grill/#" target="_blank" rel="noopener noreferrer"
+                  class="button preview-link">Preview</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images/Screenshot 2026-06-13 214339.png" alt="Fried Chicken Website preview">
+            <div class="product-info">
+              <h3>Fried Chicken Website</h3>
+              <p>Fast-food demo site showcasing menu and promotions.</p>
+              <div class="product-actions">
+                <button class="quote-trigger add-to-cart" data-product="Fried Chicken Website" data-price="0.00">Request
+                  Quote</button>
+                <a href="https://leinad222.github.io/fried-chicken-website/" target="_blank" rel="noopener noreferrer"
+                  class="button preview-link">Preview</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images/Screenshot 2026-06-14 155134.png" alt="Estate-Homes preview">
+            <div class="product-info">
+              <h3>Estate-Homes</h3>
+              <p>Real estate property showcase website with modern design and premium property listings.</p>
+              <div class="product-actions">
+                <button class="quote-trigger add-to-cart" data-product="Estate-Homes" data-price="0.00">Request
+                  Quote</button>
+                <a href="https://leinad222.github.io/estate-website-/#about" target="_blank" rel="noopener noreferrer"
+                  class="button preview-link">Preview</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <section class="pricing-section" id="pricing-page">
+    <div class=" container">
+      <h2 class="section-title">Standard Performance hosting</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <p>Best for simple websites and small personal projects.</p>
+          <span class="price">€2.69 / month</span>
+        </div>
+        <div class="pricing-card">
+          <h3>Economy</h3>
+          <p>Perfect for beginner sites with moderate traffic.</p>
+          <span class="price">€2.19 / month</span>
+        </div>
+        <div class="pricing-card">
+          <h3>Deluxe</h3>
+          <p>Great for growing brands with multiple pages.</p>
+          <span class="price">€7.49 / month</span>
+        </div>
+        <div class="pricing-card">
+          <h3>Ultimate</h3>
+          <p>For fast e-commerce and advanced website performance.</p>
+          <span class="price">€9.99 / month</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">High Performance hosting</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>First Batch</h3>
+          <p>High performance for speed-sensitive sites.</p>
+          <span class="price">€15.99 / month</span>
+        </div>
+        <div class="pricing-card">
+          <h3>Enhance</h3>
+          <p>More resources for busy websites.</p>
+          <span class="price">€24.99 / month</span>
+        </div>
+        <div class="pricing-card">
+          <h3>Plus Grow</h3>
+          <p>Advanced hosting capacity for expanding businesses.</p>
+          <span class="price">€36.99 / month</span>
+        </div>
+        <div class="pricing-card">
+          <h3>Plus Expand</h3>
+          <p>Top-tier performance for large sites and stores.</p>
+          <span class="price">€49.99 / month</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">Domain pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>.com</h3>
+          <span class="price">€22.99 / year</span>
+        </div>
+        <div class="pricing-card">
+          <h3>.net</h3>
+          <span class="price">€24.99 / year</span>
+        </div>
+        <div class="pricing-card">
+          <h3>.org</h3>
+          <span class="price">€23.99 / year</span>
+        </div>
+        <div class="pricing-card">
+          <h3>.info</h3>
+          <span class="price">€38.63 / year</span>
+        </div>
+        <div class="pricing-card">
+          <h3>.biz</h3>
+          <span class="price">€33.11 / year</span>
+        </div>
+        <div class="pricing-card">
+          <h3>.co</h3>
+          <span class="price">€47.83 / year</span>
+        </div>
+      </div>
+      <section class="container">
+        <div class="info">
+          <h3>For more information on hosting and domain pricing, please visit our</h3>
+          <a href="https://www.godaddy.com/en-ph/offers/godaddy?isc=sem3year&countryview=1&currencyType=USD&cdtl=c_17616484516.g_139465589898.k_kwd-93455629.a_731801325000.d_c.ctv_g&bnb=b&gad_source=1&gad_campaignid=17616484516&gbraid=0AAAAAD_AGdzVw4iiYWmWPrjPGk5d_476eb&gclid=Cj0KCQjw6p2bBhDgARIsAPhYqVZl9u7n8nqkXoQy3wHjL1sJrXoYzqzZtTj5aG9mN8vK4eXUjEaAq-REALw_wcB"
+            target="_blank" rel="noopener noreferrer" class="pricing-link">Go Daddy</a> pricing page.
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-content">
+        <p class="footer-text">&copy; 2024 Daniel Pace. All Rights Reserved</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/leinad222" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+          aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+          aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+          aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+          aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+      <div class="footer-credit">
+        <p class="footer-credit-text">Beautifully designed by <a href="#" class="footer-credit-link">Dr.Web</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Panel -->
+  <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="cart-close" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <div class="cart-footer">
+      <div class="cart-subtotal-line">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">€0.00</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="clear-cart" class="button">Clear Cart</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
